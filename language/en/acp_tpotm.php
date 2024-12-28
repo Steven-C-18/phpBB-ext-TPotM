@@ -27,7 +27,7 @@ $lang = array_merge($lang, [
 	'ACP_TPOTM_HALL'						=>	'Hall of fame settings',
 	// Legend Board Management
 	'ACP_TPOTM_MANAGEMENT'					=>	'Board Administration',
-	'ACP_TPOTM_MANAGEMENT_EXPLAIN'			=>	'<strong>These setting apply to both results.</strong><br><em>Please note:</em> the Founders option works together with the Admin/mods one. Means if you exclude Admin/mods keeping the Founders ON, the Founders will be not included anyway.',
+	'ACP_TPOTM_MANAGEMENT_EXPLAIN'			=>	'<strong>These setting apply to both results.</strong><br /><em>Please note:</em> the Founders option works together with the Admin/mods one. Means if you exclude Admin/mods keeping the Founders ON, the Founders will be not included anyway.',
 	// Tpl locations
 	'TPOTM_INDEX'							=>	'Index page',
 	'TPOTM_BOTTOM'							=>	'Bottom',
@@ -38,7 +38,7 @@ $lang = array_merge($lang, [
 	'TPOTM_HALL_EXPLAIN'					=>	'Enable the page',
 	'TPOTM_USERS_PAGE'						=>	'Top posters',
 	'TPOTM_USERS_PAGE_EXPLAIN'				=>	'How many users to show per page',
-	'ACP_TPOTM_TTL_MODE'					=>	'<em>The dynamic automatic cache</em> takes care of the Leap years and automatically renews at the very begin of each month.<br>When this option is ON the selection in the drop down box is not being considered any more.<br>Selecting NO disables both caches. To enable one of the cache modes select an option (again).',
+	'ACP_TPOTM_TTL_MODE'					=>	'<em>The dynamic automatic cache</em> takes care of the Leap years and automatically renews at the very begin of each month.<br />When this option is ON the selection in the drop down box is not being considered any more.<br />Selecting NO disables both caches. To enable one of the cache modes select an option (again).',
 	'TPOTM_TTL_MODE'						=>	'TPE Dynamic cache',
 	'TPOTM_TTL_TPE'							=>	'TPE Time to live',
 	'TPOTM_ACP_NO_CACHE'					=>	'no cache',
@@ -53,18 +53,18 @@ $lang = array_merge($lang, [
 	// Variouses
 	'ACP_TPOTM_VARIOUSES'					=>	'Various settings',
 	'TPOTM_TTL'								=>	'Time to live',
-	'TPOTM_TTL_EXPLAIN'						=>	'Cache time in minutes. 0 = Disabled<br><em>Use the cache to improve performance</em>',
+	'TPOTM_TTL_EXPLAIN'						=>	'Cache time in minutes. 0 = Disabled<br /><em>Use the cache to improve performance</em>',
 	'TPOTM_AVATAR'							=>	'Mini Avatar',
 	'TPOTM_AVATAR_EXPLAIN'					=>	'Display the user avatar in result',
 	'TPOTM_MINIPROFILE'						=>	'Mini profile next to posts',
 	'TPOTM_MINIPROFILE_EXPLAIN'				=>	'Display the mini-badge',
 	'TPOTM_ADM_MODS'						=>	'Include Admin and Moderators',
-	'TPOTM_ADM_MODS_EXPLAIN'				=>	'Yes = improves performance<br><em>Excluding them increases DB load, the use of it is preferred in combination with the cache.</em>',
+	'TPOTM_ADM_MODS_EXPLAIN'				=>	'Yes = improves performance<br /><em>Excluding them increases DB load, the use of it is preferred in combination with the cache.</em>',
 	'TPOTM_FOUNDERS'						=>	'Include Founders',
-	'TPOTM_FOUNDERS_EXPLAIN'				=>	'Yes = improves performance<br><em>Use this in combo with the above option.</em>',
+	'TPOTM_FOUNDERS_EXPLAIN'				=>	'Yes = improves performance<br /><em>Use this in combo with the above option.</em>',
 	'TPOTM_BANNEDS'							=>	'Include banned users',
-	'TPOTM_BANNEDS_EXPLAIN'					=>	'Yes = improves performance<br>',
+	'TPOTM_BANNEDS_EXPLAIN'					=>	'Yes = improves performance<br />',
 	// Errors
 	'ACP_TPOTM_ERRORS'						=>	'Errors',
-	'TPOTM_BADGE_IMG_INVALID'				=>	'The filename of the IMG Badge for the installed style <strong><em>"%1s"</em></strong> is wrong or the relative style folder for the extension is totally missing. Check the relative style and images folders for this extension.<br>The badge filename must be: <em><strong>tpotm_badge.png</strong></em>.<br><em>The ACP of the extension is now in a dormant status and the current settings cannot be modified till the issue has been fixed.</em>',
+	'TPOTM_BADGE_IMG_INVALID'				=>	'The filename of the IMG Badge for the installed style <strong><em>"%1s"</em></strong> is wrong or the relative style folder for the extension is totally missing. Check the relative style and images folders for this extension.<br />The badge filename must be: <em><strong>tpotm_badge.png</strong></em>.<br /><em>The ACP of the extension is now in a dormant status and the current settings cannot be modified till the issue has been fixed.</em>',
 ]);

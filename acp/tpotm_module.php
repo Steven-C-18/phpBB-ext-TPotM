@@ -120,7 +120,7 @@ class tpotm_module
 		$template->assign_vars([
 			'S_ERRORS'				=> $s_errors,
 
-			'ERRORS_MSG'			=> $s_errors ? implode('<br>', $errors) : '',
+			'ERRORS_MSG'			=> $s_errors ? implode('<br />', $errors) : '',
 
 			'TPOTM_INDEX'			=> (bool) $config['threedi_tpotm_index'],
 			'TPOTM_FORUMS'			=> (bool) $config['threedi_tpotm_forums'],
