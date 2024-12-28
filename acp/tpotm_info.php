@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * Top Poster Of The Month. An extension for the phpBB Forum Software package.
+ * Top Poster of the Month: an extension for the phpBB forum software package.
  *
  * @copyright (c) 2005,2019, 3Di
  * @license GNU General Public License, version 2 (GPL-2.0)
@@ -11,7 +11,7 @@
 namespace threedi\tpotm\acp;
 
 /**
- * Top Poster Of The Month ACP module info.
+ * Top Poster of the Month ACP module info.
  */
 class tpotm_info
 {

@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * Top Poster Of The Month. An extension for the phpBB Forum Software package.
+ * Top Poster of the Month: an extension for the phpBB forum software package.
  *
  * @copyright (c) 2005, 2019, 3Di <https://www.phpbbstudio.com>
  * @license GNU General Public License, version 2 (GPL-2.0)
@@ -59,12 +59,12 @@ $lang = array_merge($lang, [
 	],
 
 	// Translators please do not change the following line, no need to translate it!
-	'TPOTM_CREDIT_LINE'		=>	' | <a href="https://github.com/3D-I/tpotm">Top Poster Of The Month</a> &copy; 2005, 2018 - 3Di',
+	'TPOTM_CREDIT_LINE'		=>	' | <a href="https://github.com/3D-I/tpotm">Top Poster of the Month</a> &copy; 2005, 2018 - 3Di',
 
 	// Hall of fame
 	'VIEWING_TPOTM_HALL'			=> 'Viewing TPOTM Hall of fame',
 	'TPOTM_PAGE'					=> 'Hall of fame',
-	'TPOTM_HELLO'					=> 'Top Poster Of The Month - Hall Of Fame',
+	'TPOTM_HELLO'					=> 'Top Poster of the Month - Hall Of Fame',
 	'TPOTM_EXPLAIN_HALL'			=> 'From %1s to %2s',
 	'TPOTM_HALL_NO_EXPLAIN'			=> 'Since Epoch till the very end of the previous month',
 	'TPOTM_HALL_NO_TOP_POSTERS'		=> 'There are no past Top Posters yet to display.',
@@ -80,6 +80,6 @@ $lang = array_merge($lang, [
 		2	=> ' Found a total of <strong>%d</strong> top posters',
 	],
 
-	'NOT_AUTHORISED_TPOTM_HALL'		=> 'You are not authorized to see the Hall of fame of Top Poster Of The Month extension.',
-	'TPOTM_HALL_DISABLED'			=> 'The Hall of fame of Top Poster Of The Month extension is momentanely disabled.',
+	'NOT_AUTHORISED_TPOTM_HALL'		=> 'You are not authorized to see the Hall of fame of Top Poster of the Month extension.',
+	'TPOTM_HALL_DISABLED'			=> 'The Hall of fame of Top Poster of the Month extension is momentanely disabled.',
 ]);

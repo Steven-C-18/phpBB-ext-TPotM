@@ -1,9 +1,9 @@
 /**
- * 3Di - Top Poster Of The Month @copyright (c) 2005 - 2019, 3Di
+ * 3Di - Top Poster of the Month @copyright (c) 2005 - 2019, 3Di
  * https://www.phpbbstudio.com
  *
  *
- * 3Di - Top Poster Of The Month is free extension for the phpBB Forum Software Package.
+ * 3Di - Top Poster of the Month is free extension for the phpBB forum software package.
  * You can redistribute it and/or modify it under the terms of
  * the GNU General Public License, version 2 (GPL-2.0) as
  * published by the Free Software Foundation.

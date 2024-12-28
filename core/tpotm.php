@@ -11,7 +11,7 @@
 namespace threedi\tpotm\core;
 
 /**
- * Top Poster Of The Month service.
+ * Top Poster of the Month service.
  */
 class tpotm
 {

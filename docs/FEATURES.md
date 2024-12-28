@@ -1,6 +1,6 @@
-# 3Di - Top Poster Of The Month
+# 3Di - Top Poster of the Month
 
-Have a Top Poster Of The Month to show on your phpBB.
+Have a Top Poster of the Month to show on your phpBB.
 
 Requirements
 
