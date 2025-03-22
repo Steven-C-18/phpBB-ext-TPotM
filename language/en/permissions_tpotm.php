@@ -19,6 +19,6 @@ if (empty($lang) || !is_array($lang))
 }
 
 $lang = array_merge($lang, [
-	'ACL_U_ALLOW_TPOTM_VIEW'	=> '<strong>TPOTM</strong> - Can use the extension',
-	'ACL_A_TPOTM_ADMIN'			=> '<strong>TPOTM</strong> - Can administer the extension',
+	'ACL_U_ALLOW_TPOTM_VIEW'	=> '<strong>TPotM</strong> - Can use the extension',
+	'ACL_A_TPOTM_ADMIN'			=> '<strong>TPotM</strong> - Can administer the extension',
 ]);
