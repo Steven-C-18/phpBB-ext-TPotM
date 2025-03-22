@@ -26,7 +26,6 @@ v2.1.0 - 2019 Edition
 - TASK - Remove unused service from ACP module
 - TASK - Move permissions to a custom TAB
 - Code housekeeping
-- 
 
 # Latest CDB release
 
