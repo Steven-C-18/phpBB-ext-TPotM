@@ -106,6 +106,7 @@ class tpotm_module
 				$config->set('threedi_tpotm_miniprofile', $request->variable('threedi_tpotm_miniprofile', (int) $config['threedi_tpotm_miniprofile']));
 				$config->set('threedi_tpotm_adm_mods', $request->variable('threedi_tpotm_adm_mods', (int) $config['threedi_tpotm_adm_mods']));
 				$config->set('threedi_tpotm_founders', $request->variable('threedi_tpotm_founders', (int) $config['threedi_tpotm_founders']));
+				$config->set('threedi_tpotm_hof_all', $request->variable('threedi_tpotm_hof_all', (int) $config['threedi_tpotm_hof_all']));
 				$config->set('threedi_tpotm_banneds', $request->variable('threedi_tpotm_banneds', (int) $config['threedi_tpotm_banneds']));
 
 				/* Log the action and return */
@@ -130,11 +131,12 @@ class tpotm_module
 			'S_TPOTM_TTL_TPE'		=> $time_row_options,
 			'TPOTM_TTL_TPE'			=> (int) $config['threedi_tpotm_ttl_tpe'],
 			'TPOTM_HALL_EPOCH'		=> (bool) $config['threedi_tpotm_since_epoch'],
-			'TPOTM_TTL'				=> (int) $config['threedi_tpotm_ttl'],
+			'TPOTM_TTL'			=> (int) $config['threedi_tpotm_ttl'],
 			'TPOTM_MINIAVATAR'		=> (bool) $config['threedi_tpotm_miniavatar'],
 			'TPOTM_MINIPROFILE'		=> (bool) $config['threedi_tpotm_miniprofile'],
 			'TPOTM_ADM_MODS'		=> (bool) $config['threedi_tpotm_adm_mods'],
 			'TPOTM_FOUNDERS'		=> (bool) $config['threedi_tpotm_founders'],
+			'TPOTM_HOF_ALL'			=> (bool) $config['threedi_tpotm_hof_all'],
 			'TPOTM_BANNEDS'			=> (bool) $config['threedi_tpotm_banneds'],
 
 			'U_ACTION'				=> $this->u_action,
