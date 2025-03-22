@@ -40,7 +40,7 @@ If you already had an old version installed, it is advsiable to disable it first
 ## Donations
 Your contribution motivates the improvement of this free software and the creation of more.
 
-Support the phpBB 3.3.x redeveloper SMcCandlish: [![Ko-Fi](https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif](https://ko-fi.com/img/githubbutton_sm.svg))](https://ko-fi.com/smccandlish)
+Support the phpBB 3.3.x redeveloper SMcCandlish: [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/SMcCandlish)
 
 Support the original phpBB 3.1.x–3.2.x developer 3D-I: [![paypal](https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZLN6KTV2WQSRN)
 
