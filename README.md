@@ -1,5 +1,5 @@
 # Top Post of the Month (TPotM)
-[![Build Status](https://travis-ci.org/3D-I/tpotm.svg)](https://travis-ci.org/3D-I/tpotm)
+[![Build Status](https://travis-ci.org/3D-I/tpotm.svg)](https://travis-ci.org/3D-I/tpotm) ← This link button needs to be replaced, and pertains to the original version, not this fork.
 
 **Top Poster of the Month** (SMcCandlish fork) is a phpBB extension to automatically calculate a Top Poster of the Month award and a top posters Hall of Fame page.
 
