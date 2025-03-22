@@ -24,7 +24,7 @@ This is a port of the mod 3D-I made first for phpBB 2.x and then for phpBB 3.1 a
 - The (non-excluded) poster with the max number of posts made in the current month's timespan will win.
 - Custom-cached data management is in the extension's ACP module, along with a bunch of options (including logs).
 - The TPotM's profile link complies with the "Can view profile" native permissions of users.
-- Provided is a customisable viewport which contains the HoF (top posters ever) since the board's start date until the last minute of the previous month
+- Provided is a customisable viewport which contains the HoF (top posters ever) since the board's start date up to present.
 - The current TPotM lies in the present month's stats.
 - Multiple template locations.
 - Compatible with Default Avatar Extended (DAE).
