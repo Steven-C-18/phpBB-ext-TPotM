@@ -3,7 +3,7 @@
  *
  * Top Poster of the Month: an extension for the phpBB forum software package.
  *
- * @copyright (c) 2005, 2019, 2024 3Di <https://www.phpbbstudio.com>
+ * @copyright (c) 2005, 2019, 2024 3Di <https://www.phpbbstudio.com>; significant tweaks 2025 by SMcCandlish.
  * @license GNU General Public License, version 2 (GPL-2.0)
  *
  */
@@ -71,12 +71,12 @@ class tpotm
 		$phpExt
 	)
 	{
-		$this->auth				=	$auth;
+		$this->auth			=	$auth;
 		$this->cache			=	$cache;
 		$this->config			=	$config;
-		$this->db				=	$db;
+		$this->db			=	$db;
 		$this->ext_manager		=	$ext_manager;
-		$this->user				=	$user;
+		$this->user			=	$user;
 		$this->path_helper		=	$path_helper;
 		$this->template			=	$template;
 
@@ -84,12 +84,12 @@ class tpotm
 		$this->php_ext			=	$phpExt;
 
 		$is_dae_enabled			=	$this->ext_manager->is_enabled('threedi/dae');
-		$this->is_dae_enabled	=	$is_dae_enabled;
+		$this->is_dae_enabled		=	$is_dae_enabled;
 
 	}
 
 	/**
-	 * Returns whether the DAE is enabled and follows some conditions
+	 * Returns whether the DAE (Default Avatar Extended) is enabled and follows some conditions.
 	 *
 	 * @return bool
 	 */
@@ -99,7 +99,7 @@ class tpotm
 	}
 
 	/**
-	 * Returns the time for cache adjustable in ACP
+	 * Returns the time for cache adjustable in ACP.
 	 *
 	 * @return int
 	 */
@@ -109,7 +109,7 @@ class tpotm
 	}
 
 	/**
-	 * Returns the number of minutes to show for templating purposes
+	 * Returns the number of minutes to show for templating purposes.
 	 *
 	 * @return int
 	 */
@@ -119,7 +119,7 @@ class tpotm
 	}
 
 	/**
-	 * Returns whether the user is authed
+	 * Returns whether the user is authed.
 	 *
 	 * @return bool
 	 */
@@ -129,7 +129,7 @@ class tpotm
 	}
 
 	/**
-	 * Returns whether the Hall of fame has been enabled or not
+	 * Returns whether the Hall of Fame has been enabled or not.
 	 *
 	 * @return bool
 	 */
@@ -139,7 +139,7 @@ class tpotm
 	}
 
 	/**
-	 * Returns whether the miniavatar has been enabled or not
+	 * Returns whether the miniavatar has been enabled or not.
 	 *
 	 * @return bool
 	 */
@@ -149,7 +149,7 @@ class tpotm
 	}
 
 	/**
-	 * Returns whether the miniprofile has been enabled or not
+	 * Returns whether the miniprofile has been enabled or not.
 	 *
 	 * @return bool
 	 */
@@ -159,7 +159,7 @@ class tpotm
 	}
 
 	/**
-	 * Returns whether the phpBB is equal or greater than v3.2.1
+	 * Returns whether the phpBB is equal or greater than v3.2.1.
 	 *
 	 * @return bool
 	 */
@@ -169,7 +169,7 @@ class tpotm
 	}
 
 	/**
-	 * Returns the style related URL to the icon mini stats image file for 3.1.x
+	 * Returns the style-related URL to the icon mini stats image file for 3.1.x.
 	 *
 	 * @return string	URL
 	 */
@@ -179,15 +179,15 @@ class tpotm
 	}
 
 	/**
-	 * Returns whether the basic badge img exists
+	 * Returns whether the basic badge image exists.
 	 *
 	 * @return	bool
 	 */
 	public function style_badge_exists()
 	{
 		/**
-		 * Right or wrong we need to find the correct
-		 * path to use on a per location basis
+		 * Right or wrong, we need to find the correct
+		 * path to use on a per-location basis.
 		 */
 		$rootpath = (defined('PHPBB_USE_BOARD_URL_PATH') && PHPBB_USE_BOARD_URL_PATH) ? generate_board_url() . '/' : $this->root_path;
 
@@ -195,7 +195,7 @@ class tpotm
 	}
 
 	/**
-	 * Returns the style related URL to the miniprofile badge image file
+	 * Returns the style-related URL to the miniprofile badge image file.
 	 *
 	 * @param string	$user_tpotm		the miniprofile image filename with extension
 	 * @return string					URL
@@ -206,7 +206,7 @@ class tpotm
 	}
 
 	/**
-	 * Returns the style related URL and HTML markup to the miniavatar image file
+	 * Returns the style-related URL and HTML markup to the miniavatar image file.
 	 *
 	 * @return string	Formatted URL
 	 */
@@ -216,7 +216,7 @@ class tpotm
 	}
 
 	/**
-	 * Returns the style related URL and HTML markup to the miniavatar image file for prosilver
+	 * Returns the style-related URL and HTML markup to the miniavatar image file for ProSilver theme.
 	 *
 	 * @return string	Formatted URL
 	 */
@@ -226,7 +226,7 @@ class tpotm
 	}
 
 	/**
-	 * Badge IMG check-point
+	 * Badge image check-point.
 	 *
 	 * @return string	Formatted URL, language string otherwise.
 	 */
@@ -243,7 +243,7 @@ class tpotm
 	}
 
 	/**
-	 * Updates the user_tpotm to be empty for everyone
+	 * Updates the user_tpotm to be empty for everyone.
 	 *
 	 * @return void
 	 */
@@ -260,7 +260,7 @@ class tpotm
 	}
 
 	/**
-	 * Updates the user_tpotm with the badge filename for the present winner
+	 * Updates the user_tpotm with the badge filename for the present winner.
 	 *
 	 * @param int	$tpotm_user_id	the current TPOTM user_id
 	 * @return void
@@ -278,7 +278,7 @@ class tpotm
 	}
 
 	/**
-	 * Resets the user_tpotm information in the database
+	 * Resets the user_tpotm information in the database.
 	 *
 	 * @param int	$tpotm_user_id	the current TPOTM user_id
 	 * @return void
@@ -294,20 +294,20 @@ class tpotm
 	}
 
 	/**
-	 * Template switches over all
+	 * Template switches over all.
 	 *
 	 * @return void
 	 */
 	public function template_switches_over_all()
 	{
 		$this->template->assign_vars([
-			'S_TPOTM'				=> $this->is_authed(),
-			'S_IS_RHEA'				=> $this->is_rhea(),
-			'S_TPOTM_INDEX_BOTTOM'	=> ($this->config['threedi_tpotm_index']) ? true : false,
+			'S_TPOTM'			=> $this->is_authed(),
+			'S_IS_RHEA'			=> $this->is_rhea(),
+			'S_TPOTM_INDEX_BOTTOM'		=> ($this->config['threedi_tpotm_index']) ? true : false,
 			'S_TPOTM_INDEX_TOP'		=> ($this->config['threedi_tpotm_index']) ? false : true,
-			'S_TPOTM_INDEX_FORUMS'	=> ($this->config['threedi_tpotm_forums']) ? true : false,
+			'S_TPOTM_INDEX_FORUMS'		=> ($this->config['threedi_tpotm_forums']) ? true : false,
 			'S_TPOTM_AVATAR'		=> ($this->config['threedi_tpotm_miniavatar']) ? true : false,
-			'S_TPOTM_MINIPROFILE'	=> ($this->config['threedi_tpotm_miniprofile']) ? true : false,
+			'S_TPOTM_MINIPROFILE'		=> ($this->config['threedi_tpotm_miniprofile']) ? true : false,
 			'S_TPOTM_HALL'			=> ($this->config['threedi_tpotm_hall']) ? true : false,
 			'S_U_TOOLTIP_SEL'		=> (bool) $this->user->data['user_tt_sel_tpotm'],
 			'TPOTM_ICON_STATS'		=> (string) $this->icon_tpotm_stats_url(),
@@ -315,7 +315,7 @@ class tpotm
 	}
 
 	/**
-	 * Performs a date range costruction of the current month
+	 * Performs a date-range costruction of the current month.
 	 *
 	 * @param int		$hr			24 hrs format like 14
 	 * @param int		$min		minutes like 01
@@ -333,9 +333,9 @@ class tpotm
 	}
 
 	/**
-	 * Gets the Unix Timestamp values for the current month.
+	 * Gets the Unix timestamp values for the current month.
 	 *
-	 * @return array	($month_start, $month_end) Unix Timestamps
+	 * @return array	($month_start, $month_end) Unix timestamps
 	 */
 	protected function month_timegap()
 	{
@@ -354,7 +354,7 @@ class tpotm
 	}
 
 	/**
-	 * Returns whether to include Founders in the query
+	 * Returns whether to include Founders in the query.
 	 *
 	 * @return string	SQL statement, empty string otherwise
 	 */
@@ -366,8 +366,9 @@ class tpotm
 	}
 
 	/**
-	 * Don't run the code if the admin so wishes.
-	 * Returns an array of users with admin/mod auths (thx Steve for the idea)
+	 * Include admins and moderators, if the admin so wishes.
+	 * Returns an array of users with admin/mod auths (thx Steve for the idea).
+	 * Fixed to now respect the Founder setting above.
 	 *
 	 * @return array	empty array otherwise
 	 */
@@ -380,11 +381,20 @@ class tpotm
 		else
 		{
 			/**
-			 * Inspiration taken from Top Five ext
-			 * Grabs all admins and mods, it is a catch all.
+			 * Inspiration taken from Top Five extension.
+			 * Grabs all admins and mods; it is a catch all
+			 * (but will remove Founders if told to do so).
 			 */
 			$admin_ary = $this->auth->acl_get_list(false, 'a_', false);
 			$admin_ary = (!empty($admin_ary[0]['a_'])) ? $admin_ary[0]['a_'] : [];
+
+			if (!(bool) $this->config['threedi_tpotm_founders']) {
+			// Filter out founders from the admin array
+			$founder_ids = $this->db->sql_fetchrowset('SELECT user_id FROM ' . USERS_TABLE . ' WHERE user_type = ' . USER_FOUNDER);
+			$founder_ids = array_column($founder_ids, 'user_id');
+
+			$admin_ary = array_diff($admin_ary, $founder_ids);
+			}
 
 			$mod_ary = $this->auth->acl_get_list(false, 'm_', false);
 			$mod_ary = (!empty($mod_ary[0]['m_'])) ? $mod_ary[0]['m_'] : [];
@@ -395,7 +405,7 @@ class tpotm
 	}
 
 	/**
-	 * Returns whether to include Admin and mods in the query
+	 * Returns whether to include admins and mods in the query.
 	 *
 	 * @return string	SQL statement, empty string otherwise
 	 */
@@ -404,6 +414,19 @@ class tpotm
 		$tpotm_admin_mods = (bool) $this->config['threedi_tpotm_adm_mods'];
 
 		return ($tpotm_admin_mods) ? '' : 'AND ' . $this->db->sql_in_set('u.user_id', $this->auth_admin_mody_ary(), true, true) . ' ';
+	}
+
+	/**
+	 * Returns whether to include Founders and Admins/Mods in the Hall of Fame even if
+	 * exluded as Top Poster of the Month candidates by above options.
+	 *
+	 * @return bool		true to include them, false otherwiseSQL statement, empty string otherwise
+	 */
+	public function wishes_hof_all()
+	{
+		$tpotm_hof_all = (bool) $this->config['threedi_tpotm_hof_all'];
+
+		return ($tpotm_hof_all) ? 'true' : 'false';
 	}
 
 	/**
@@ -434,7 +457,7 @@ class tpotm
 	}
 
 	/**
-	 * Returns whether to include also banned users in the query
+	 * Returns whether to also include banned users in the query.
 	 *
 	 * @return string	SQL statement, empty string otherwise
 	 */
@@ -449,10 +472,10 @@ class tpotm
 	 * Returns the SQL main SELECT statement used in various places.
 	 *
 	 * @param var	$and_admmods	the DBal AND statement to use
-	 * @param var	$and_bans		the DBal AND statement to use
+	 * @param var	$and_bans	the DBal AND statement to use
 	 * @param var	$and_founder	the DBal AND statement to use
 	 * @param int	$tpotm_start	UNIX timestamp of a starting point
-	 * @param int	$tpotm__end		UNIX timestamp of an ending point
+	 * @param int	$tpotm__end	UNIX timestamp of an ending point
 	 * @return	string	DBal SELECT statement
 	 */
 	public function tpotm_sql($and_admmods, $and_bans, $and_founder, $tpotm_start, $tpotm__end)
@@ -473,7 +496,7 @@ class tpotm
 	}
 
 	/**
-	 * Gets the total posts count for the current month till now
+	 * Gets the total posts count for the current month till now.
 	 *
 	 * @return int	$total_month
 	 */
@@ -482,7 +505,7 @@ class tpotm
 		list($month_start, $month_end) = $this->month_timegap();
 
 		/**
-		 * Admin wants the cache to be cleared asap
+		 * Admin wants the cache to be cleared ASAP.
 		 * Show changes immediately after.
 		 */
 		if ((int) $this->config_time_cache_min() < 1)
@@ -491,8 +514,8 @@ class tpotm
 		}
 
 		/**
-		 * Check cached data
-		 * Run the whole stuff only when needed
+		 * Check cached data.
+		 * Run the whole stuff only when needed.
 		 */
 		if (($total_month = $this->cache->get('_tpotm_total')) === false)
 		{
@@ -510,10 +533,10 @@ class tpotm
 	}
 
 	/**
-	 * There can be only ONE, the TPOTM.
-	 * If same tot posts and same exact post time then the post ID rules
-	 * Empty arrays SQL errors eated by setting the fourth parm as true within "sql_in_set"
-	 * Performs a cache's check-in prior to delivery the final results
+	 * There can be only ONE, the TPotM.
+	 * If same total posts and same exact post time, then the post ID rules.
+	 * Empty arrays SQL errors eaten by setting the 4th param as true within "sql_in_set".
+	 * Performs a cache check-in prior to delivery the final results.
 	 *
 	 * @return array $row		cached or not results
 	*/
@@ -522,7 +545,7 @@ class tpotm
 		list($month_start, $month_end) = $this->month_timegap();
 
 		/**
-		 * Admin wants the cache to be cleared asap
+		 * Admin wants the cache to be cleared ASAP.
 		 */
 		if ((int) $this->config_time_cache_min() < 1)
 		{
@@ -530,7 +553,7 @@ class tpotm
 		}
 
 		/**
-		 * Run the whole stuff only when needed
+		 * Run the whole stuff only when needed.
 		 */
 		if (($row = $this->cache->get('_tpotm')) === false)
 		{
@@ -539,13 +562,13 @@ class tpotm
 			$and_bans = $this->wishes_banneds();
 			$and_founder = $this->wishes_founder();
 
-			/* The main thang */
+			/* The main thing */
 			$sql = $this->tpotm_sql($and_admmods, $and_bans, $and_founder, (int) $month_start, (int) $month_end);
 			$result = $this->db->sql_query_limit($sql, 1);
 			$row = $this->db->sql_fetchrow($result);
 			$this->db->sql_freeresult($result);
 
-			/* There is a TPOTM, let's update the DB then */
+			/* There is a TPotM, let's update the DB then */
 			if ( (isset($row['total_posts']) && (int) $row['total_posts'] >= 1) && empty($row['user_tpotm']) )
 			{
 				$this->perform_user_reset((int) $row['user_id']);
@@ -558,9 +581,9 @@ class tpotm
 	}
 
 	/*
-	 * Gets the total TPOTM posts count for the current month till now
+	 * Gets the total TPotM posts count for the current month till now.
 	 *
-	 * @param int		$user_id			the current TPOTM user_id
+	 * @param int		$user_id		the current TPOTM user_id
 	 * @return int		$tpotm_tot_posts	cached or not tpotm_tot_posts results
 	*/
 	protected function perform_cache_on_tpotm_tot_posts($user_id)
@@ -568,7 +591,7 @@ class tpotm
 		list($month_start, $month_end) = $this->month_timegap();
 
 		/**
-		 * Admin wants the cache to be cleared asap
+		 * Admin wants the cache to be cleared ASAP.
 		 */
 		if ((int) $this->config_time_cache_min() < 1)
 		{
@@ -576,8 +599,8 @@ class tpotm
 		}
 
 		/**
-		 * Check cached data
-		 * Run the whole stuff only when needed
+		 * Check cached data.
+		 * Run the whole stuff only when needed.
 		 */
 		if (($tpotm_tot_posts = $this->cache->get('_tpotm_tot_posts')) === false)
 		{
@@ -596,7 +619,7 @@ class tpotm
 	}
 
 	/*
-	 * There can be only ONE... show the TPOTM.
+	 * There can be only ONE... show the TPotM.
 	 *
 	 * @return void
 	 */
@@ -620,7 +643,7 @@ class tpotm
 
 		/**
 		 * Fresh install (one starting post by founder)
-		 * or if a new Month has began results in zero posts
+		 * or if a new month has begun results in zero posts.
 		 */
 		$tpotm_un_nobody = $this->user->lang['TPOTM_NOBODY'];
 		$tpotm_post = ((int) $tpotm_tot_posts >= 1) ? $this->user->lang('TPOTM_POST', (int) $tpotm_tot_posts) : false;
@@ -648,12 +671,12 @@ class tpotm
 			'S_TPOTM_AVAILABLE'		=> ((int) $tpotm_tot_posts < 1) ? false : true,
 		];
 
-		/* Prevents a potential Division by Zero below */
+		/* Prevents a potential division by zero below. */
 		$tpotm_tot_posts = ($tpotm_tot_posts == 0) ? true : (int) $tpotm_tot_posts;
 
 		/**
-		 * Percentages for Hall of Fame's styling etc..
-		 * It could happen an user posted more than the total posts in the month.
+		 * Percentages for Hall of Fame's styling etc.
+		 * It could happen that a user posted more than the total posts in the month.
 		 * Ask Quick-Install o_0
 		 */
 		$percent = ((int) $tpotm_tot_posts > (int) $total_month) ? 0 : min(100, ((int) $tpotm_tot_posts) / (int) $total_month) * 100;
@@ -666,7 +689,7 @@ class tpotm
 		];
 
 		/**
-		 * Don't run this code if there is not a TPOTM yet
+		 * Don't run this code if there is not a TPotM yet
 		 */
 		if ((int) $tpotm_tot_posts >= 1)
 		{
@@ -692,7 +715,7 @@ class tpotm
 			else
 			{
 				/**
-				 * Hall of fame's "default avatar" must be TPOTM's badge IMG for both versions
+				 * Hall of Fame's "default avatar" must be TPotM's badge image for both versions.
 				 */
 				$tpotm_av_3132_hall = (!empty($row['user_avatar'])) ? phpbb_get_avatar($row_avatar, '') : $this->check_point_badge_img();
 			}
