@@ -70,14 +70,14 @@ class listener implements EventSubscriberInterface
 	static public function getSubscribedEvents()
 	{
 		return [
-			'core.user_setup'						=>	'load_language_on_setup',
-			'core.permissions'						=>	'permissions',
+			'core.user_setup'				=>	'load_language_on_setup',
+			'core.permissions'				=>	'permissions',
 			'core.ucp_prefs_personal_data'			=>	'tpotm_ucp_prefs_data',
-			'core.ucp_prefs_personal_update_data'	=>	'tpotm_ucp_prefs_update_data',
-			'core.page_header'						=>	'add_page_header_link',
-			'core.viewonline_overwrite_location'	=>	'viewonline_page',
-			'core.page_header_after'				=>	'tpotm_template_switch',
-			'core.user_setup_after'					=>	'display_tpotm',
+			'core.ucp_prefs_personal_update_data'		=>	'tpotm_ucp_prefs_update_data',
+			'core.page_header'				=>	'add_page_header_link',
+			'core.viewonline_overwrite_location'		=>	'viewonline_page',
+			'core.page_header_after'			=>	'tpotm_template_switch',
+			'core.user_setup_after'				=>	'display_tpotm',
 			'core.viewtopic_cache_user_data'		=>	'viewtopic_tpotm_cache_user_data',
 			'core.viewtopic_modify_post_row'		=>	'viewtopic_tpotm',
 		];
@@ -126,7 +126,7 @@ class listener implements EventSubscriberInterface
 	}
 
 	/**
-	 * Add configuration to Board preferences in UCP
+	 * Add configuration to board preferences in UCP
 	 * @param $event
 	 */
 	public function tpotm_ucp_prefs_data($event)
@@ -153,13 +153,13 @@ class listener implements EventSubscriberInterface
 			$this->template->assign_vars([
 				'TPOTM_UCP_BADGE'		=> $this->tpotm->style_miniprofile_badge('tpotm_badge.png'),
 				'S_USER_TOOLTIP'		=> $user_tooltip,
-				'S_USER_TOOLTIP_SEL'	=> $user_tooltip_sel,
+				'S_USER_TOOLTIP_SEL'		=> $user_tooltip_sel,
 			]);
 		}
 	}
 
 	/**
-	 * Updates configuration to Board preferences in UCP
+	 * Updates configuration to board preferences in UCP
 	 * @param $event
 	 */
 	public function tpotm_ucp_prefs_update_data($event)
@@ -193,7 +193,7 @@ class listener implements EventSubscriberInterface
 	}
 
 	/**
-	 * Show users viewing hall of fame on the Who Is Online page
+	 * Show users viewing Hall of Fame on the Who Is Online page
 	 *
 	 * @param \phpbb\event\data	$event	Event object
 	 */
