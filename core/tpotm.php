@@ -301,13 +301,13 @@ class tpotm
 	public function template_switches_over_all()
 	{
 		$this->template->assign_vars([
-			'S_TPOTM'			=> $this->is_authed(),
-			'S_IS_RHEA'			=> $this->is_rhea(),
-			'S_TPOTM_INDEX_BOTTOM'		=> ($this->config['threedi_tpotm_index']) ? true : false,
+			'S_TPOTM'				=> $this->is_authed(),
+			'S_IS_RHEA'				=> $this->is_rhea(),
+			'S_TPOTM_INDEX_BOTTOM'	=> ($this->config['threedi_tpotm_index']) ? true : false,
 			'S_TPOTM_INDEX_TOP'		=> ($this->config['threedi_tpotm_index']) ? false : true,
-			'S_TPOTM_INDEX_FORUMS'		=> ($this->config['threedi_tpotm_forums']) ? true : false,
+			'S_TPOTM_INDEX_FORUMS'	=> ($this->config['threedi_tpotm_forums']) ? true : false,
 			'S_TPOTM_AVATAR'		=> ($this->config['threedi_tpotm_miniavatar']) ? true : false,
-			'S_TPOTM_MINIPROFILE'		=> ($this->config['threedi_tpotm_miniprofile']) ? true : false,
+			'S_TPOTM_MINIPROFILE'	=> ($this->config['threedi_tpotm_miniprofile']) ? true : false,
 			'S_TPOTM_HALL'			=> ($this->config['threedi_tpotm_hall']) ? true : false,
 			'S_U_TOOLTIP_SEL'		=> (bool) $this->user->data['user_tt_sel_tpotm'],
 			'TPOTM_ICON_STATS'		=> (string) $this->icon_tpotm_stats_url(),

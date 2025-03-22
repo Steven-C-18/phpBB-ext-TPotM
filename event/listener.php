@@ -70,14 +70,14 @@ class listener implements EventSubscriberInterface
 	static public function getSubscribedEvents()
 	{
 		return [
-			'core.user_setup'				=>	'load_language_on_setup',
-			'core.permissions'				=>	'permissions',
+			'core.user_setup'						=>	'load_language_on_setup',
+			'core.permissions'						=>	'permissions',
 			'core.ucp_prefs_personal_data'			=>	'tpotm_ucp_prefs_data',
-			'core.ucp_prefs_personal_update_data'		=>	'tpotm_ucp_prefs_update_data',
-			'core.page_header'				=>	'add_page_header_link',
-			'core.viewonline_overwrite_location'		=>	'viewonline_page',
-			'core.page_header_after'			=>	'tpotm_template_switch',
-			'core.user_setup_after'				=>	'display_tpotm',
+			'core.ucp_prefs_personal_update_data'	=>	'tpotm_ucp_prefs_update_data',
+			'core.page_header'						=>	'add_page_header_link',
+			'core.viewonline_overwrite_location'	=>	'viewonline_page',
+			'core.page_header_after'				=>	'tpotm_template_switch',
+			'core.user_setup_after'					=>	'display_tpotm',
 			'core.viewtopic_cache_user_data'		=>	'viewtopic_tpotm_cache_user_data',
 			'core.viewtopic_modify_post_row'		=>	'viewtopic_tpotm',
 		];
