@@ -49,7 +49,7 @@ Support the original phpBB 3.1.x–3.2.x developer 3D-I: [![paypal](https://www.
 
 ## Known issues and to-do list
 
-- It probably makes sense to undo merging of Admins and Mods into a single pseudo-category; there seems to be no reason for this, and many users of the extension would probably prefer to distinguish, e.g by allowing Mods as TPotM candiates but not Admins (incl. Founders).
+- It probably makes sense to undo merging of Admins and Mods into a single pseudo-category; there seems to be no reason for this, and many users of the extension would probably prefer to distinguish, e.g by allowing Mods but not Admins (including Founders) as TPotM candiates.
 - Could also distinguish between Global Mods (basically sub-Admins) and Forum Mods (with authority only over a particular set of topics).
 
 ## License
