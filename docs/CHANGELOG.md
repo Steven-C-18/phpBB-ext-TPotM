@@ -1,4 +1,18 @@
-# 3Di - Top Poster Of The Month - Changes Log
+# 3Di - Top Poster of the Month - Changes Log
+
+v2.1.2.1 - 2025-01
+- Fork by S. McCandlish
+- Implemented the left-out fixes by 3Di as mentioned below
+- Fixed issue where exclusion of Founders didn't work if Admins were included, because Founders are also Admins.
+- Fixed bug in which "just use the last month's stats" logic for calculating the TPotM was also applied to Hall of Fame rendering, which both ignored recent activity and confusingly claimed in the listing that all these users had not logged in for a month.
+- Enabled inclusion of Founders, Admins, and Mods in Hall of Fame listing even if excluded as Top Poster of the Month candidates.
+- Minor style fixes (normal English capitalization and punctuation, etc.)
+- Updated versioning and requirements.
+- To do? Undo merging of Admins and Mods into a single pseudo-category; there seems to be no reason for this, and many users of the extension would probably prefer to distinguish, e.g by allowing Mods as TPotM candiates but not Admins (incl. Founders). Could also distinguish between Global Mods (basically sub-Admins) and Forum Mods (with authority only over a particular set of topics).
+
+v2.1.2 - 2020
+- Various fixes in the original GitHub codebase by 3Di
+- Development by 3Di stopped here, even with some fixes implemented but never pulled into the main branch
 
 v2.1.1 - 2019 Summer Edition
 - FIX - Display errors in ACP settings if any
@@ -13,7 +27,6 @@ v2.1.0 - 2019 Edition
 - TASK - Move permissions to a custom TAB
 - Code housekeeping
 - 
-
 
 # Latest CDB release
 
