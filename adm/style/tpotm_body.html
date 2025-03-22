@@ -87,7 +87,6 @@
 						<input type="radio" class="radio" name="threedi_tpotm_adm_mods" value="0"{% if not TPOTM_ADM_MODS %} id="threedi_tpotm_adm_mods" checked="checked"{% endif %} /> {{ lang('NO') }}
 					</dd>
 				</dl>
-
 				<dl>
 					<dt>
 						<label for="threedi_tpotm_founders">{{ lang('TPOTM_FOUNDERS') }}{{ lang('COLON') }}</label><br />{{ lang('TPOTM_FOUNDERS_EXPLAIN') }}
@@ -97,7 +96,15 @@
 						<input type="radio" class="radio" name="threedi_tpotm_founders" value="0"{% if not TPOTM_FOUNDERS %} id="threedi_tpotm_founders" checked="checked"{% endif %} /> {{ lang('NO') }}
 					</dd>
 				</dl>
-
+				<dl>
+					<dt>
+						<label for="threedi_tpotm_hof_all">{{ lang('TPOTM_HOF_ALL') }}{{ lang('COLON') }}</label><br />{{ lang('TPOTM_HOF_ALL_EXPLAIN') }}
+					</dt>
+					<dd>
+						<input type="radio" class="radio" name="threedi_tpotm_hof_all" value="1"{% if TPOTM_HOF_ALL %} id="threedi_tpotm_hof_all" checked="checked"{% endif %}/> {{ lang('YES') }} &nbsp;
+						<input type="radio" class="radio" name="threedi_tpotm_hof_all" value="0"{% if not TPOTM_HOF_ALL %} id="threedi_tpotm_hof_all" checked="checked"{% endif %} /> {{ lang('NO') }}
+					</dd>
+				</dl>
 				<dl>
 					<dt>
 						<label for="threedi_tpotm_banneds">{{ lang('TPOTM_BANNEDS') }}{{ lang('COLON') }}</label><br />{{ lang('TPOTM_BANNEDS_EXPLAIN') }}
