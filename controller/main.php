@@ -148,6 +148,7 @@ class main
 		$and_admmods = $this->tpotm->wishes_admin_mods();
 		$and_bans = $this->tpotm->wishes_banneds();
 		$and_founder = $this->tpotm->wishes_founder();
+		$hof_all = $this->tpotm->wishes_hof_all();
 
 		/*
 		 * Top posters ever
@@ -155,7 +156,13 @@ class main
 		 * If same tot posts and same exact post time then the post ID rules
 		 * SQL errors for empty arrays skipped by setting the fourth parm as true within "sql_in_set"
 		*/
-		$sql = $this->tpotm->tpotm_sql($and_admmods, $and_bans, $and_founder, (int) $board_start, (int) $end_last_month);
+		if ($hof_all) {
+			$sql = $this->tpotm->tpotm_sql('', $and_bans, '', (int) $board_start, (int) $now);
+		} else {
+			$sql = $this->tpotm->tpotm_sql($and_admmods, $and_bans, $and_founder, (int) $board_start, (int) $now);
+		} // This originally used $end_last_month instead of $now, but this had the very confusing effect
+		  // of displaying "Last on: Day YYYY-MM-DD HH:MMM xm" timestamps a month off, as if the user had
+		  // had been entirely missing for a month.
 
 		/* Rowset array for the viewport */
 		$result = $this->db->sql_query_limit($sql, $limit , $start, (int) $ttl_diff);
@@ -217,7 +224,7 @@ class main
 		/* Date range (tooltip) */
 		if ($this->user->data['user_tt_tpotm'] && $this->user->data['user_tt_sel_tpotm'])
 		{
-			/* User prefs hard-coded since it is a fake any way */
+			/* User prefs hard-coded since it is a fake anyway */
 			$data_begin = $this->user->format_date((int) $board_start, $this->config['threedi_tpotm_utc'] . ' H:i');
 			$data_end = $this->user->format_date((int) $end_last_month, $this->config['threedi_tpotm_utc']) . ' 00:00';
 		}
