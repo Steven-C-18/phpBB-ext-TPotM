@@ -31,9 +31,11 @@ This is a port of the mod 3D-I made first for phpBB 2.x and then for phpBB 3.1 a
 
 ## Installation
 
-Copy the extension to phpBB/ext/threedi/tpotm
+Copy the extension to `/ext/threedi/tpotm` in your phpBB installation's directory.
 
 Go to "ACP" &gt; "Customise" &gt; "Extensions" and enable the "3Di - Top Poster of the Month" extension.
+
+If you already had an old version installed, it is advsiable to disable it first, remove its files (not its database entries), install the new version, enable it, and purge the board cache.
 
 ## Donations
 Your contribution motivates the improvement of this free software and the creation of more.
