@@ -388,12 +388,21 @@ class tpotm
 			$admin_ary = $this->auth->acl_get_list(false, 'a_', false);
 			$admin_ary = (!empty($admin_ary[0]['a_'])) ? $admin_ary[0]['a_'] : [];
 
-			if (!(bool) $this->config['threedi_tpotm_founders']) {
-			// Filter out founders from the admin array
-			$founder_ids = $this->db->sql_fetchrowset('SELECT user_id FROM ' . USERS_TABLE . ' WHERE user_type = ' . USER_FOUNDER);
-			$founder_ids = array_column($founder_ids, 'user_id');
+			if (empty($this->config['threedi_tpotm_founders'])) 
+			{
+				// Filter out founders from the admin array
+				$sql = 'SELECT user_id FROM ' . USERS_TABLE . ' 
+				WHERE user_type = ' . USER_FOUNDER . ' AND user_posts > 0';
+				$result = $this->db->sql_query($sql);
+				
+				$founder_ids = [];
+				while ($row = $this->db->sql_fetchrow($result))
+				{
+					$founder_ids[] = $row['user_id'];
+				}
+				$this->db->sql_freeresult($result);
 
-			$admin_ary = array_diff($admin_ary, $founder_ids);
+				$admin_ary = array_diff($admin_ary, $founder_ids);
 			}
 
 			$mod_ary = $this->auth->acl_get_list(false, 'm_', false);
